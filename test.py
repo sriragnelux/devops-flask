@@ -9,7 +9,7 @@ class TestHelloWorld(unittest.TestCase):
     def test_hello_world(self):
         response = self.client.get('/')
         self.assertEqual(response.status_code, 200)
-        self.assertIn(b'<h1><center> Superstar sarojkumar<center><h1>', response.data)
+        self.assertIn(b'<h1><center> Hello World app! Version 1 of sarath<center><h1>', response.data)
 
 if __name__ == '__main__':
     unittest.main()
