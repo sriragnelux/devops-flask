@@ -25,8 +25,8 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SECRET_KEY }}
         run: |
           echo "$SSH_PRIVATE_KEY" > private_key && chmod 600 private_key &&
-          rsync -azP -e "ssh -i private_key -o StrictHostKeyChecking=no" app.py requirement.txt root@65.0.133.127:/root/test/ &&
-          ssh -o StrictHostKeyChecking=no -i private_key root@65.0.133.127 '
+          rsync -azP -e "ssh -i private_key -o StrictHostKeyChecking=no" app.py requirement.txt root@3.106.134.115:/root/test/ &&
+          ssh -o StrictHostKeyChecking=no -i private_key root@3.106.134.115 '
           cd /root/test/
           pip3 install -r requirement.txt
           python3 app.py
