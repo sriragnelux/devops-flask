@@ -29,4 +29,5 @@ jobs:
           ssh -o StrictHostKeyChecking=no -i private_key root@65.0.133.127 '
           cd /root/test/
           pip3 install -r requirement.txt
-          python3 app.py '
+          python3 app.py
+          '
